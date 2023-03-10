@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Hourth Shopify Offer Dislayer",
+  "description": "This is an extension created to be a dev test for joinining Hourth",
+  "version": "1.0",
+  "action": {
+    "default_popup": "hourth.html",
+    "default_icon": "/images/hourth.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*.png", "popup/*"],
+      "matches": ["https://brixtonshoes.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://brixtonshoes.com/"]
+    }
+  ]
+}
