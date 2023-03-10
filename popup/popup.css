@@ -11,6 +11,7 @@
   --p-6: 1.2em;
   --p-8: 1.5em;
   --p-10: 1.8em;
+  padding: var(--p-6);
 }
 
 .absolute {

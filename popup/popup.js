@@ -76,6 +76,12 @@ const clickHourth = async (e) => {
   const shopGetProducts = await fetch(
     `https://brixtonshoes.com/products.json?limit=250&page=1`,
     {
+      'Access-Control-Allow-Credentials' : true,
+      'Access-Control-Allow-Origin':'*',
+      'Access-Control-Allow-Methods':'GET',
+      'Access-Control-Allow-Headers':'application/json',
+    },
+    {
       method: "GET",
       mode: "cors",
     }
@@ -183,3 +189,5 @@ const clickHourth = async (e) => {
     }
   }
 };
+
+document.getElementById('button').addEventListener('click', clickHourth)
