@@ -96,7 +96,10 @@ const clickHourth = async (e) => {
     });
 
   if (!loading() && !error()) {
-    console.log(shopGetProducts);
+    shopGetProducts.products = shopGetProducts.products.sort((a, b) => {
+      if(new Date(a.updated_at).getTime() < new Date(b.updated_at).getTime()) return 1;
+      else return -1
+    })
     // Element parent
     const [ordersEl] = document.getElementsByClassName("orders");
     // First element
